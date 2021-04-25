@@ -1,15 +1,14 @@
 import Weather from "./Weather";
 import './App.css';
 
-function App() {
+export default function App() {
+  return (
   return (
     <div className="App">
-      <header className="App-header">
-     <h1>Hello world!</h1>
-     <Weather city="Paris"/>
-      </header>
+      <Weather />
     </div>
   );
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
