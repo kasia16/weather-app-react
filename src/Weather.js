@@ -1,16 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  let weatherData = {
-    city: "London",
-    date: "Today",
-    temp: "9",
-    conditions: "Mostly sunny",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-    realFeel: "8",
-    wind: "10"
-  };
+  const [te]
+
+
+  function handleResponse(response){
+
+  }
+  let apiKey = "2a93853098f7d48795c997915462e083";
+  let city = "London";
+  apiUrl ="api.openweathermap.org/data/2.5/weather?q=&{city}&appid=${apiKey}&units=metric";
+  axios.het(apiUrl).then(handleResponse);
+
+  
   return (
     <div className="Wrapper">
       <div className="Weather">
