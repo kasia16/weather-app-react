@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weather, setWeather] = useState({loaded: false});
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
-
 setWeather({
   loaded: true,
   city: response.data.name,
@@ -20,11 +20,30 @@ setWeather({
   
 });
   }
-if(weather.loaded){
-  return (
+
+  function search() {
+  const apiKey = "2a93853098f7d48795c997915462e083";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+ 
+}
+function handleSubmit(event){
+  event.preventDefault();
+  search();
+
+}
+
+function handleCityChange(event){
+setCity(event.target.value);
+}
+  
+
+
+if (weather.loaded) {
+return (
     <div className="Wrapper">
       <div className="Weather">
-        <form className="mb-2">
+        <form onSubmit={handleSubmit} className="mb-2">
           <div className="row">
             <div className="col-7">
               <input
@@ -32,6 +51,7 @@ if(weather.loaded){
                 placeholder="Type a city.."
                 className="form-control"
                 autoComplete="off"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
@@ -39,17 +59,18 @@ if(weather.loaded){
                 type="submit"
                 value="Search"
                 className="btn btn-primary w-100"
+                
               />
             </div>
 
-            <div class="col-2">
-              <button type="button" class="btn btn-info">
+            <div className="col-2">
+              <button type="button" className="btn btn-info">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-geo-alt-fill"
+                  className="bi bi-geo-alt-fill"
                   viewBox="0 0 16 16"
                 >
                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
@@ -58,67 +79,14 @@ if(weather.loaded){
             </div>
           </div>
         </form>
+        
+        <WeatherInfo data={weather} />
 
-        <div className="row">
-          <div className="col-4">
-            <h1>{weather.city}</h1>
-            <h2>
-              <FormattedDate date={weather.date} />
-            </h2>
-          </div>
-          <div className="col-3">
-            <div className="today">
-              <img
-                src={weather.icon}
-                alt={weather.description}
-                className="float-right"
-              />
-              <br />
-
-              <ul>
-                <div className="text-capitalize"><li className="float-right"> {weather.description}</li></div>
-              </ul>
-            </div>
-          </div>
-          <div className="col-5">
-            <div className="temperature">
-              <ul>
-                <li>
-                  {" "}
-                <strong>{Math.round(weather.temp)}</strong>
-                </li>
-                <li>
-                  <span className="units">
-                    <a href="/">°C </a>| <a href="/">°F</a>
-                  </span>
-                </li>
-
-                <li>
-                  Feels like: <span>{Math.round(weather.realfeel)}</span>°C{" "}
-                </li>
-                <li>
-                  Wind: <span>{Math.round(weather.wind)}</span> km/h{" "}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="days">
-          <div className="row weather-forecast"></div>
-        </div>
       </div>
-    </div>
-  );
-
-  } else 
-  {
-
-  const apiKey = "2a93853098f7d48795c997915462e083";
-  let city = "London";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
-
-  return     "Loading";
-  
+      </div>
+    );
+  } else {
+    search();
+    return "Loading...";
   }
 }
