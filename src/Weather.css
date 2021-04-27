@@ -49,11 +49,11 @@ li {
   line-height: 14px;
 }
 
-.weather-temperature {
+.temperature {
   padding: 20px 0 0 0;
   text-align: left;
 }
-.weather-temperature strong {
+.temperature strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
