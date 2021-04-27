@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
+import Loader from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({loaded: false});
@@ -87,6 +88,14 @@ return (
     );
   } else {
     search();
-    return "Loading...";
+    return      (
+      <Loader
+        type="ThreeDots"
+        color="black"
+        height={50}
+        width={50}
+        timeout={3000} //3 secs
+      />
+    );
   }
 }
