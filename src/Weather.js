@@ -56,13 +56,14 @@ return (
               />
             </div>
             <div className="col-3">
+              <div className="button-submit">
               <input
                 type="submit"
                 value="Search"
                 className="btn btn-primary w-100"
                 
               />
-            </div>
+            </div></div>
 
             <div className="col-2">
               <button type="button" className="btn btn-info">

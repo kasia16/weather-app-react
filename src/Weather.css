@@ -1,11 +1,11 @@
 .col-7 {
-  padding: 0 0 0 15px;
+  padding: 0 10px 0 15px;
 }
 .col-2 {
   padding: 0;
 }
 .col-3 {
-  padding: 0 10px;
+  padding: 0 10px 0 0px;
 }
 
 h1 {
@@ -28,10 +28,9 @@ h2 {
 
 .icon {
   display: block;
-  padding: 0;
 }
 
-.text-capitalize {
+.today {
   text-align: center;
 }
 
@@ -43,7 +42,7 @@ ul {
 li {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 4px;
   color: rgb(135, 135, 135);
   font-size: 14px;
   font-weight: 100;
@@ -51,18 +50,16 @@ li {
 }
 
 .temperature {
-  padding: 10px 0 0 0;
+  padding: 11px 0 0 0;
   text-align: left;
 }
 .temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 72px;
   line-height: 1;
   font-weight: 400;
 }
-.weather-temperature .units {
-  font-size: 16px;
-}
+
 .weather-temperature .active {
   color: rgb(135, 135, 135);
   cursor: default;

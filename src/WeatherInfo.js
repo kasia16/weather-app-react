@@ -18,7 +18,7 @@ return (
               <img
                 src={props.data.icon}
                 alt={props.data.description}
-                className="float-none"
+                className="left"
               />
               <br />
               

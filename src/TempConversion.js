@@ -15,8 +15,7 @@ const [unit, setUnit] = useState("metric");
   }
 
 
-
-if (unit === 'metric'){
+if (unit === "metric"){
 
 
     return(
