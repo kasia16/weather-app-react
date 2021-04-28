@@ -13,7 +13,7 @@ setWeather({
   loaded: true,
   city: response.data.name,
   date: new Date(response.data.dt*1000),
-  icon: response.data.weather[0].icon,
+  icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
   description: response.data.weather[0].description,
   temp: response.data.main.temp,
   realfeel: response.data.main.feels_like,
@@ -34,7 +34,7 @@ function handleSubmit(event){
 
 }
 
-function handleCityChange(event){
+function changeCity(event){
 setCity(event.target.value);
 }
   
@@ -52,7 +52,7 @@ return (
                 placeholder="Type a city.."
                 className="form-control"
                 autoComplete="off"
-                onChange={handleCityChange}
+                onChange={changeCity}
               />
             </div>
             <div className="col-3">

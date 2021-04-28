@@ -26,12 +26,13 @@ h2 {
   padding: 0 0 10px 0px;
 }
 
-.col-3 .today {
-  padding: 20px 0;
-}
 .icon {
   display: block;
   padding: 0;
+}
+
+.text-capitalize {
+  text-align: center;
 }
 
 ul {
@@ -50,7 +51,7 @@ li {
 }
 
 .temperature {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   text-align: left;
 }
 .temperature strong {
