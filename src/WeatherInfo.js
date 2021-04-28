@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import TempConversion from "./TempConversion";
 
 
 export default function WeatherInfo(props){
@@ -28,16 +29,7 @@ return (
           <div className="col-5">
             <div className="temperature">
               <ul>
-                <li>
-                  {" "}
-                <strong>{Math.round(props.data.temp)}</strong>
-                </li>
-                <li><br />
-                  <span className="units">
-                    <a href="/">°C </a>| <a href="/">°F</a>
-                  </span>
-                </li>
-
+              <TempConversion tempC={props.data.temp} />
                 <li>
                   Feels like: <span>{Math.round(props.data.realfeel)}</span>°C{" "}
                 </li>
