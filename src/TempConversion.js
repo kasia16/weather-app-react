@@ -14,7 +14,6 @@ const [unit, setUnit] = useState("metric");
 
   }
 
-
 if (unit === "metric"){
 
 
@@ -29,7 +28,7 @@ if (unit === "metric"){
                 </div>
                 );
   } else {
-let tempF = (props.tempC * 9)/5+32;
+let tempF = (props.tempC * 9/5)+32;
   return (
   
       <div className="TempConversion">
