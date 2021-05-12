@@ -9,19 +9,20 @@
 }
 
 h1 {
-  color: #878787;
-  font-size: 28px;
-  font-weight: 100;
-  line-height: 28px;
+  color: rgb(37, 84, 97);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
   margin-bottom: 0;
   text-align: left;
-  padding: 10px 0 10px 0px;
+  padding: 30px 0 10px 0px;
 }
 
 h2 {
-  color: #878787;
+  color: rgb(37, 84, 97);
   font-size: 14px;
-  line-height: 12px;
+  line-height: 14px;
+  font-weight: 500;
   margin: 0;
   padding: 0 0 10px 0px;
 }
@@ -32,6 +33,7 @@ h2 {
 
 .today {
   text-align: center;
+  padding: 26px 0;
 }
 
 ul {
@@ -43,26 +45,36 @@ li {
   list-style: none;
   margin: 0;
   padding: 4px;
-  color: rgb(135, 135, 135);
+  color: rgb(83, 78, 78);
   font-size: 14px;
   font-weight: 100;
   line-height: 14px;
 }
 
 .temperature {
-  padding: 11px 0 0 0;
+  padding: 13px 0 0 0;
   text-align: left;
 }
 .temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 72px;
+  font-size: 70px;
   line-height: 1;
   font-weight: 400;
 }
 
-.weather-temperature .active {
-  color: rgb(135, 135, 135);
-  cursor: default;
+.WeatherForecast {
+  color: rgb(83, 78, 78);
+  font-size: 14px;
+  padding: 40px 10px 10px 0;
+  text-align: center;
+}
+.WeatherForecast-day {
+  color: rgb(83, 78, 78);
+  padding: 0 0 7px;
+}
+.WeatherForecast-temp {
+  color: rgb(83, 78, 78);
+  padding: 7px 0;
 }
 
 .weather-temperature .active:hover {
