@@ -1,3 +1,6 @@
+.Weather {
+  color: rgb(37, 84, 97);
+}
 .col-7 {
   padding: 0 10px 0 15px;
 }
@@ -19,7 +22,6 @@ h1 {
 }
 
 h2 {
-  color: rgb(37, 84, 97);
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
@@ -44,8 +46,7 @@ ul {
 li {
   list-style: none;
   margin: 0;
-  padding: 4px;
-  color: rgb(83, 78, 78);
+  padding: 4px 0;
   font-size: 14px;
   font-weight: 100;
   line-height: 14px;
@@ -63,17 +64,14 @@ li {
 }
 
 .WeatherForecast {
-  color: rgb(83, 78, 78);
   font-size: 14px;
   padding: 40px 10px 10px 0;
   text-align: center;
 }
 .WeatherForecast-day {
-  color: rgb(83, 78, 78);
   padding: 0 0 7px;
 }
 .WeatherForecast-temp {
-  color: rgb(83, 78, 78);
   padding: 7px 0;
 }
 
