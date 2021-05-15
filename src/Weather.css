@@ -1,14 +1,12 @@
 .Weather {
   color: rgb(37, 84, 97);
 }
-.col-7 {
-  padding: 0 10px 0 15px;
+.col-9 {
+  padding: 0 0 0 15px;
 }
-.col-2 {
-  padding: 0;
-}
+
 .col-3 {
-  padding: 0 10px 0 0px;
+  padding: 0 25px 0 10px;
 }
 
 h1 {
