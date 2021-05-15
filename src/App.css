@@ -2,10 +2,9 @@
   margin: 20px auto 3px;
   width: 480px;
   padding: 20px 10px 20px 20px;
-  border: 2px solid #dfe1e5;
-  color: rgb(37, 84, 97);
+  border: 3px solid #a5bbc2;
   border-radius: 20px;
-  background-image: linear-gradient(to top, #cfd9df 1%, #a5c1c5 80%);
+  background-image: linear-gradient(to top, #eff5f7 1%, #85b4bd 80%);
   font-family: "Quicksand", sans-serif;
 }
 

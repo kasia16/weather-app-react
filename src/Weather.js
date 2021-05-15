@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast.js";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import Loader from "react-loader-spinner";
 
@@ -12,9 +12,10 @@ export default function Weather(props) {
   function handleResponse(response){
 setWeather({
   loaded: true,
+  coord: response.data.coord,
   city: response.data.name,
   date: new Date(response.data.dt*1000),
-  icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+  icon: response.data.weather[0].icon,
   description: response.data.weather[0].description,
   temp: response.data.main.temp,
   realfeel: response.data.main.feels_like,
@@ -84,7 +85,7 @@ return (
         </form>
         
         <WeatherInfo data={weather} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weather.coord} />
 
       </div>
       </div>
