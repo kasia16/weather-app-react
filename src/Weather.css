@@ -75,10 +75,6 @@ li {
   padding: 7px 0;
 }
 
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 h3 {
   margin: 20px 0 0 0;
   padding: 30px 0 0 0;
@@ -94,10 +90,6 @@ h3 {
   line-height: 19px;
   text-align: center;
 }
-
-.weather-forecast img {
-  margin: 0 auto;
-  display: block;
-  height: 50px;
-  width: 50px;
+WeatherIcon {
+  size: 20px;
 }
