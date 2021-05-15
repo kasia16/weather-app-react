@@ -17,7 +17,7 @@ return (
           <div className="col-3">
             <div className="today">
               <div className= "float-left">
-              <WeatherIcon code={props.data.icon} size={60} />
+              <WeatherIcon code={props.data.icon}/>
   
       </div>
               <br />

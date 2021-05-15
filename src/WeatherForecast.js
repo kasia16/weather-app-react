@@ -1,35 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
+import WeatherForecastDay from "./WeatherForecastDay";
+
 export default function WeatherForecast(props) {
+let [loaded, setLoaded] = useState(false);
+let [forecast, setForecast] = useState(null);
 
     function handleResponse(response){
-console.log(response.data);
+setForecast(response.data.daily);
+setLoaded(true);
     }
-let apiKey = "2a93853098f7d48795c997915462e083";
+
+ if (loaded){
+return (
+     <div className="WeatherForecast">
+        <div className="row">
+            <div className="col">
+                <WeatherForecastDay data={forecast[0]}/>
+            </div>
+            </div>
+            </div>
+    );
+
+ } else {
+
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 let lon = props.coordinates.lon;
 let lat = props.coordinates.lat;
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     
  axios.get(apiUrl).then(handleResponse);
 
-
-
-    return <div className="WeatherForecast">
-        <div className="row">
-            <div className="col">
-                <div className="WeatherForecast-day">Mon</div>
-                <img src="https://image.flaticon.com/icons/png/128/4150/4150932.png" alt=""></img>
-                <div className="WeatherForecast-temp">
-                    <span className="WeatherForecast-temp-high"><strong>9°</strong></span>
-                    <span className="WeatherForecast-temp-low"> 9°</span>
-                    </div>
-            </div>
-          
-    
-          
-             
-        </div>
-
-    </div>
+ return null;
+    }
 }
+
