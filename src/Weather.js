@@ -19,13 +19,14 @@ setWeather({
   description: response.data.weather[0].description,
   temp: response.data.main.temp,
   realfeel: response.data.main.feels_like,
-  wind: response.data.wind.speed
+  wind: response.data.wind.speed,
+  humidity: response.data.main.humidity
   
 });
   }
 
   function search() {
-  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  const apiKey = "58cc6c63d0f7c842945d23a36b9209e4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
  

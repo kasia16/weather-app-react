@@ -14,19 +14,8 @@ return (
               <FormattedDate date={props.data.date} />
             </h2>
           </div>
-          <div className="col-3">
-            <div className="today">
-              <div className= "float-left">
-              <WeatherIcon code={props.data.icon} />
-  
-      </div>
-              <br />
-              
-                <div className="text-capitalize"><ul><li> {props.data.description}</li></ul></div>
-              
-            </div>
-          </div>
-          <div className="col-5">
+          
+          <div className="col-4">
             <div className="temperature">
               <ul>
               <TempConversion tempC={props.data.temp} />
@@ -36,10 +25,23 @@ return (
                 <li>
                   Wind: <span>{Math.round(props.data.wind)}</span> km/h{" "}
                 </li>
+                <li>
+                  Humidity: <span>{props.data.humidity}</span> %{" "}
+                </li>
               </ul>
             </div>
           </div>
-        
+        <div className="col-4
+          ">
+            <div className="today">
+              <div className= "float-left">
+              <WeatherIcon code={props.data.icon}/>
+              </div>
+              </div>
+              <br />
+                <div className="text-capitalize"><ul><li> {props.data.description}</li></ul></div>
+              
+          </div>
         <div className="days">
           <div className="row weather-forecast"></div>
         </div>

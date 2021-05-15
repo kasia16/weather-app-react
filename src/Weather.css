@@ -2,11 +2,14 @@
   color: rgb(37, 84, 97);
 }
 .col-9 {
-  padding: 0 0 0 15px;
+  padding: 0 5px 0 5px;
 }
 
 .col-3 {
-  padding: 0 25px 0 10px;
+  padding: 0 20px 0 10px;
+}
+.col-4 {
+  padding: 0;
 }
 
 h1 {
@@ -25,10 +28,6 @@ h2 {
   font-weight: 500;
   margin: 0;
   padding: 0 0 10px 0px;
-}
-
-.icon {
-  display: block;
 }
 
 .today {
@@ -87,7 +86,4 @@ h3 {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-}
-WeatherIcon {
-  size: 20px;
 }

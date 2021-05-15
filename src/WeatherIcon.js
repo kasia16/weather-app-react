@@ -3,9 +3,9 @@ import React from "react";
 export default function WeatherIcon(props) {
   let icon = "";
   if (props.code === "03d" || props.code === "03n") {
-    icon = "/svg/003-cloudy.svg"; //scattered clouds day/night
+    icon = "/img/021-cloudy.svg"; //scattered clouds day/night
   } else if (props.code === "04d") {
-    icon = "/svg/003-cloudy.svg"; //broken clouds day
+    icon = "/img/021-cloudy.svg"; //broken clouds day
   } else if (props.code === "04n") {
     icon = "/img/021-cloudy.svg"; //broken clouds night
   } else if (props.code === "01d") {
@@ -21,9 +21,9 @@ export default function WeatherIcon(props) {
   } else if (props.code === "09n") {
     icon = "/img/021-rain-2.svg"; //showers night
   } else if (props.code === "10d") {
-    icon = "/img/021-rain-1.png"; //mod-heavy rain day
+    icon = "/img/021-rain-1.svg"; //mod-heavy rain day
   } else if (props.code === "10n") {
-    icon = "/img/021-rain-1.png"; //rain night
+    icon = "/img/021-rain-1.svg"; //rain night
   } else if (props.code === "11d") {
     icon = "/img/021-storm.svg"; //thunderstorm day
   } else if (props.code === "11n") {
