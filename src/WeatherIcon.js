@@ -1,33 +1,37 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
-  const codeMapping = {
-    "01d": "021-sun",
-    "01n": "021-sun",
-    "02d": "021-sun",
-    "02n": "021-sun",
-    "03d": "021-cloud",
-    "03n": "021-sun",
-    "04d": "021-cloud",
-    "04n": "021-cloud",
-    "09d": "021-cloud",
-    "09n": "021-cloud",
-    "10d": "021-cloud",
-    "10n": "021-cloud",
-    "11d": "021-cloud",
-    "11n": "021-cloud",
-    "13d": "021-cloud",
-    "13n": "021-cloud",
-    "50d": "021-cloud",
-    "50n": "021-cloud",
+
+const codeMapping = {
+    "01d": "CLEAR_DAY",
+    "01n": "CLEAR_NIGHT",
+    "02d": "PARTLY_CLOUDY_DAY",
+    "02n": "PARTLY_CLOUDY_NIGHT",
+    "03d": "PARTLY_CLOUDY_DAY",
+    "03n": "PARTLY_CLOUDY_NIGHT",
+    "04d": "CLOUDY",
+    "04n": "CLOUDY",
+    "09d": "RAIN",
+    "09n": "RAIN",
+    "10d": "RAIN",
+    "10n": "RAIN",
+    "11d": "RAIN",
+    "11n": "RAIN",
+    "13d": "SNOW",
+    "13n": "SNOW",
+    "50d": "FOG",
+    "50n": "FOG",
   };
 
-  return (
-    <img
-      src={require(`./img/${codeMapping[props.code]}.svg`)}
-      alt="Current weather"
-      width="150"
-      height="150"
+return(
+     <ReactAnimatedWeather
+      icon={codeMapping[props.code]}
+      color="white"
+      size={props.size}
+      animate={true}
     />
   );
 }
+
+

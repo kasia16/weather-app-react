@@ -32,10 +32,13 @@ return (
             </div>
           </div>
         <div className="col-3">
-            
+          <div className="clearfix">
               <div className= "float-left">
-              <WeatherIcon code={props.data.icon} />
+                <div className="icon-big">
+              <WeatherIcon code={props.data.icon} size={70}/>
               </div>
+              </div>
+          </div>
           </div>
         <div className="days">
           <div className="row weather-forecast"></div>

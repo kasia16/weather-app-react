@@ -1,20 +1,21 @@
 .container {
-  padding: 0 20px 20px 13px;
+  padding: 0 20px 0px 13px;
 }
 .Weather {
   color: rgb(244, 245, 245);
 }
 .col-9 {
-  padding: 0 5px 0 5px;
-}
-
-.col-3 {
-  padding: 0 20px 0 10px;
+  padding: 0 5px 0 20px;
 }
 .col-4 {
   padding: 0;
 }
-
+.col-3 {
+  padding: 0;
+}
+.button-submit {
+  padding: 0 20px 0 10px;
+}
 h1 {
   color: rgb(244, 247, 248);
   font-size: 36px;
@@ -45,7 +46,6 @@ ul {
 
 li {
   list-style: none;
-  margin: 0;
   padding: 4px 0;
   font-size: 14px;
   font-weight: 100;
@@ -54,6 +54,7 @@ li {
 
 .temperature {
   padding: 16px 0 0 40px;
+  margin: 0 12px;
   text-align: left;
 }
 
@@ -67,6 +68,10 @@ a {
   font-weight: 400;
 }
 
+.col-3 .icon-big {
+  padding: 18px 60px 0 0;
+}
+
 .WeatherForecast {
   font-size: 14px;
   padding: 10px 5px 10px 5px;
@@ -78,12 +83,6 @@ a {
     rgba(0, 73, 122, 0.1) 1%,
     rgba(209, 230, 228, 0.2) 80%
   );
-}
-.WeatherForecast-day {
-  padding: 0 0 7px;
-}
-.WeatherForecast-temp {
-  padding: 7px 0;
 }
 
 h3 {
@@ -101,6 +100,9 @@ h3 {
   line-height: 19px;
   text-align: center;
 }
-WeatherIcon {
-  size: 20px;
+.icon-small {
+  padding: 10px 0;
+}
+.WeatherForecast-temp {
+  padding: 7px 0;
 }

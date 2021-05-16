@@ -40,7 +40,6 @@ function handleSubmit(event){
 function changeCity(event){
 setCity(event.target.value);
 }
-  
 
 
 if (weather.loaded) {
