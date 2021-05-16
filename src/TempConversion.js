@@ -32,7 +32,7 @@ let tempF = (props.tempC * 9/5)+32;
   return (
   
       <div className="TempConversion">
-                <span className="tempC"> 
+                <span className="tempF"> 
 <strong>{Math.round(tempF)} </strong></span>
                   <span className="units"><ul><li>
                     <a href="/" onClick={convertToC}>°C </a>{""}|{""} °F

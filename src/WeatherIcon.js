@@ -1,42 +1,33 @@
 import React from "react";
 
 export default function WeatherIcon(props) {
-  let icon = "";
-  if (props.code === "03d" || props.code === "03n") {
-    icon = "/img/021-cloudy.svg"; //scattered clouds day/night
-  } else if (props.code === "04d") {
-    icon = "/img/021-cloudy.svg"; //broken clouds day
-  } else if (props.code === "04n") {
-    icon = "/img/021-cloudy.svg"; //broken clouds night
-  } else if (props.code === "01d") {
-    icon = "/img/021-sun.svg"; //clear day
-  } else if (props.code === "01n") {
-    icon = "/img/021-night.svg"; //clear night
-  } else if (props.code === "02d") {
-    icon = "/img/021-cloudy-1.svg"; //partly cloudy day
-  } else if (props.code === "02n") {
-    icon = "/img/021-night-1.svg"; //partly cloudy night
-  } else if (props.code === "09d") {
-    icon = "/img/021-rain-2.svg"; //showers day
-  } else if (props.code === "09n") {
-    icon = "/img/021-rain-2.svg"; //showers night
-  } else if (props.code === "10d") {
-    icon = "/img/021-rain-1.svg"; //mod-heavy rain day
-  } else if (props.code === "10n") {
-    icon = "/img/021-rain-1.svg"; //rain night
-  } else if (props.code === "11d") {
-    icon = "/img/021-storm.svg"; //thunderstorm day
-  } else if (props.code === "11n") {
-    icon = "/img/021-storm.svg"; //thunderstorm night
-  } else if (props.code === "13d") {
-    icon = "/img/021-snowing-3.svg"; //snow day
-  } else if (props.code === "13n") {
-    icon = "/img/021-snowing-3.svg"; //snow night
-  } else if (props.code === "50d") {
-    icon = "/img/021-tornado.svg"; //mist day
-  } else if (props.code === "50n") {
-    icon = "/img/021-tornado.svg"; //mist night
-  }
+  const codeMapping = {
+    "01d": "021-sun",
+    "01n": "021-sun",
+    "02d": "021-sun",
+    "02n": "021-sun",
+    "03d": "021-cloud",
+    "03n": "021-sun",
+    "04d": "021-cloud",
+    "04n": "021-cloud",
+    "09d": "021-cloud",
+    "09n": "021-cloud",
+    "10d": "021-cloud",
+    "10n": "021-cloud",
+    "11d": "021-cloud",
+    "11n": "021-cloud",
+    "13d": "021-cloud",
+    "13n": "021-cloud",
+    "50d": "021-cloud",
+    "50n": "021-cloud",
+  };
 
-  return <img src={icon} alt="weather-icon" />;
+  return (
+    <img
+      src={require(`./img/${codeMapping[props.code]}.svg`)}
+      alt="Current weather"
+      width="150"
+      height="150"
+    />
+  );
 }
