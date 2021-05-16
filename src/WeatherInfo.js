@@ -26,7 +26,7 @@ return (
                   Wind: <span>{Math.round(props.data.wind)}</span> km/h{" "}
                 </li>
                 <li>
-                  Humidity: <span>{props.data.humidity}</span> %{" "}
+                  Humidity: <span>{props.data.humidity}</span>%{" "}
                 </li>
               </ul>
             </div>
