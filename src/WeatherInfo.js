@@ -11,7 +11,7 @@ return (
           <div className="col-5">
             <h1>{props.data.city}</h1>
             <h2>
-              <FormattedDate date={props.data.date} />
+              Last updated:<FormattedDate date={props.data.date} />
             </h2>
           </div>
           

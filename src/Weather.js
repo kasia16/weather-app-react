@@ -33,7 +33,11 @@ setWeather({
 }
 function handleSubmit(event){
   event.preventDefault();
+  if (event.target.value){
   search();
+  } else {
+    alert("Please type a city...");
+  }
 
 }
 
