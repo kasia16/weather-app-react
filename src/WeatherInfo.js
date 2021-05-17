@@ -35,7 +35,7 @@ return (
           <div className="clearfix">
               <div className= "float-left">
                 <div className="icon-big">
-              <WeatherIcon code={props.data.icon} size={70}/>
+              <WeatherIcon code={props.data.icon}/>
               </div>
               </div>
           </div>
