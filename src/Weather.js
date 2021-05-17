@@ -9,6 +9,7 @@ export default function Weather(props) {
   const [weather, setWeather] = useState({loaded: false});
   const [city, setCity] = useState(props.defaultCity);
 
+
   function handleResponse(response){
 setWeather({
   loaded: true,
@@ -32,9 +33,8 @@ setWeather({
  
 }
 function handleSubmit(event){
-  event.preventDefault();
-  search();
-  
+ event.preventDefault();
+ search();
 
 }
 
