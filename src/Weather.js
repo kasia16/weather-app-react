@@ -8,7 +8,8 @@ import Loader from "react-loader-spinner";
 export default function Weather(props) {
   const [weather, setWeather] = useState({loaded: false});
   const [city, setCity] = useState(props.defaultCity);
-
+  
+  
 
   function handleResponse(response){
 setWeather({
@@ -32,11 +33,16 @@ setWeather({
   axios.get(apiUrl).then(handleResponse);
  
 }
-function handleSubmit(event){
- event.preventDefault();
- search();
 
-}
+function handleSubmit(event) {
+ event.preventDefault(); 
+ if (city.length > 0){
+ search();
+   }else{
+            alert("Please type a city...");
+        }}
+ 
+
 
 function changeCity(event){
 setCity(event.target.value);
